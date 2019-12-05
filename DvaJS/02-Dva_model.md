@@ -1,4 +1,5 @@
-# Dva  
+# Dva API 
+网址：```https://dvajs.com/api/```
 ## model
 model是dva中最重要的概念。  
 model包含5个属性：  
