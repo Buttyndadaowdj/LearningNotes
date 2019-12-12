@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <!-- 1.创建虚拟DOM元素对象 -->
+    <div id="test"></div>
+    <!-- 声明 -->
+    <script type="text/babel">
+    
+    // 这种写法就不是字符串，也不是HTML，而是JSX语法，是一个javaScript的语法扩展，
+        var vDom=<h1>Hello React!</h1>
+        // 2. 将虚拟DOM渲染到页面真实DOM容器中
+        ReactDOM.render(
+            vDom,
+            document.getElementById('test')
+            )
+    </script>
+</body>
+</html>

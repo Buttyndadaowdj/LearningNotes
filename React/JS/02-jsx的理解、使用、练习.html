@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <!-- 例子一：声明一个名为name的变量，然后在JSX中使用它，并将它包裹在大括号中 -->
+    <!-- <div id="root"></div>
+    <script type="text/babel">
+       const name='Josh Perez';
+       const element =<h1>Hello,{name}</h1>;
+      ReactDOM.render(
+       element,
+      document.getElementById('root')
+      );
+    </script> -->
+    <!-- 在JSX语法中，你可以在大括号里放置任何有效的JavaScript表达式 -->
+    
+    <!-- 例子二：调用JavaScript函数的结果，并将结果嵌入到<h1>元素中去 -->
+    <!-- <div id="root"></div>
+    <script type="text/babel">
+       function formatName(user){
+          return user.firstName+' '+user.lastName;
+       }
+
+       const user={
+         firstName:'Harper',
+         lastName:'Perez'
+       }
+       const element=(<h1>Hello,{formatName(user)}</h1>)
+      ReactDOM.render(
+        element,
+        document.getElementById('root')
+      );
+    </script> -->
+    <div id="root"></div>
+    <div id="root1"></div>
+    <script type="text/babel">
+      const msg="I Like You"
+      const myId="asd"
+      const vDom2=(<h3 id={myId.toLocaleUpperCase()}>{msg.toLocaleLowerCase()}</h3>)
+
+      const vDom1=(<h2 id={myId.toLocaleLowerCase()}>{msg.toLocaleUpperCase()}</h2>)
+      ReactDOM.render(
+        vDom1,document.getElementById('root'),
+      )
+       ReactDOM.render(
+         vDom2,document.getElementById('root1'), 
+       )
+    </script>
+  </body>
+</html>
